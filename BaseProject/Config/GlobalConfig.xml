@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Framework>
+  <Settings>
+    <URL>https://www.mandarinoriental.com/</URL>
+    <Browser>Chrome</Browser>
+    <TestType>RegressionTest</TestType>
+    <IsReport>Y</IsReport>
+    <BuildName>MandarimOriental</BuildName>
+    <UserName>CesarBerbel</UserName>
+  </Settings>
+</Framework>
