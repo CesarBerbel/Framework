@@ -39,6 +39,11 @@ namespace Framework.Tools
 
 		public static void EnterTextInto(IWebElement _meliante, string text)
 		{
+			_meliante.SendKeys(text);
+		}
+
+		public static void ReplaceTextInto(IWebElement _meliante, string text)
+		{
 			_meliante.Clear();
 			_meliante.SendKeys(text);
 		}

@@ -109,6 +109,14 @@ namespace Framework.Tools
 		}
 
 		//
+		// WINDOW MANIPULATION
+		//
+		public static void SwitchToWindow(string window)
+		{
+			DriverContext.Driver.SwitchTo().Window(window);
+		}
+
+		//
 		// AUXILIAR FUNCTIONS
 		//
 		public static object ExecuteJs(string script, IWebElement _meliante)

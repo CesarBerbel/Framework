@@ -20,13 +20,6 @@ namespace Framework.Tools
 			Assert.IsTrue(element.Text == text, $"The component should show the text '{text}' but is showing '{element.Text}'"); ;
 		}
 
-		public static void CheckInputText(IWebElement element, string text)
-		{
-			WaitTools.WaitForInputTextNotEmpty(element);
-			string value = element.GetAttribute("value");
-			Assert.IsTrue(value == text, $"The component should show the text '{text}' but is showing '{value}'"); ;
-		}
-
 		public static void CheckElementTextContains(IWebElement element, string text)
 		{
 			WaitTools.WaitForTextNotEmpty(element);
@@ -40,6 +33,7 @@ namespace Framework.Tools
 			string output = "";
 			for(int i = 0; i < shouldBe.Length; i++)
 			{
+				WaitTools.WaitForTextNotEmpty(fromElements[i]);
 				if (shouldBe[i] != fromElements[i].Text)
 				{
 					output = $"{output} In the position {i + 1} the text should be '{shouldBe[i]}' but is '{fromElements[i].Text}'";
@@ -53,6 +47,7 @@ namespace Framework.Tools
 			bool find = false;
 			for (int i = 0; i < shouldBe.Length; i++)
 			{
+				WaitTools.WaitForTextNotEmpty(fromElements[i]);
 				if (shouldBe == fromElements[i].Text)
 				{
 					find = true;
@@ -66,6 +61,7 @@ namespace Framework.Tools
 			bool find = false;
 			for (int i = 0; i < shouldBe.Length; i++)
 			{
+				WaitTools.WaitForTextNotEmpty(fromElements[i]);
 				if (shouldBe == fromElements[i].Text)
 				{
 					find = true;
