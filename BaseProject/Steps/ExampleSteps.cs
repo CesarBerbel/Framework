@@ -9,7 +9,7 @@ namespace Framework
 	{
 		[Given(@"I navigate to the search page (.*)")]
 		public void GivenINavigateToTheSearchPage(string url)
-		{
+		{ 
 			GetInstance<ExamplePage>().GoToThePage(url);
 		}
 

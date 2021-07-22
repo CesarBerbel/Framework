@@ -3,7 +3,7 @@
 	As a automation QA
 	I want to search for Valtech on search engines
 
-Scenario Outline: Checking Valtech search results
+Scenario Outline: Checking Valtech search results 
 Given I navigate to the search page <url>
 And I fill the search input with <term>
 When I press ok
